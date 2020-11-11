@@ -7,7 +7,11 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
+    Plug 'prettier/vim-prettier', {
+          \ 'do': 'yarn install',
+           \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+    " vuw
+    Plug 'posva/vim-vue'
     " Better Comments
     Plug 'tpope/vim-commentary'
     " Change dates fast
@@ -21,6 +25,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Useful for React Commenting 
     Plug 'suy/vim-context-commentstring'
     " highlight all matches under cursor
+    " Like gitLens
+    Plug 'APZelos/blamer.nvim'
     " Plug 'RRethy/vim-illuminate'
 
   if exists('g:vscode')
@@ -41,8 +47,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Treesitter
-    Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'nvim-treesitter/playground'
+    " Plug 'nvim-treesitter/nvim-treesitter'
+    " Plug 'nvim-treesitter/playground'
     " Cool Icons
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'ryanoasis/vim-devicons'
@@ -55,7 +61,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
-    Plug 'glepnir/galaxyline.nvim'
+    " Plug 'glepnir/galaxyline.nvim'
     Plug 'kevinhwang91/rnvimr'
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -83,7 +89,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Interactive code
     Plug 'metakirby5/codi.vim'
     " Better tabline
-    Plug 'romgrk/barbar.nvim'
+    " Plug 'romgrk/barbar.nvim'
     " undo time travel
     Plug 'mbbill/undotree'
     " Find and replace
@@ -105,7 +111,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mattn/vim-gist'
     Plug 'mattn/webapi-vim'
     " Colorizer
-    Plug 'norcalli/nvim-colorizer.lua'
+    " Plug 'norcalli/nvim-colorizer.lua'
     " Intuitive buffer closing
     Plug 'moll/vim-bbye'
     " Debugging
@@ -155,10 +161,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Echo doc
     " Plug 'Shougo/echodoc.vim'
     " Plug 'hardcoreplayers/spaceline.vim'
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'morhetz/gruvbox'
     " Ranger
-    " Plug 'francoiscabrol/ranger.vim'
+    Plug 'francoiscabrol/ranger.vim'
     " Plug 'rbgrouleff/bclose.vim'
     " Making stuff
     " Plug 'neomake/neomake'
@@ -169,6 +176,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'romgrk/lib.kom'
     " Plug 'brooth/far.vim'
     " Debugging
+    " Elixir 
+    Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+    Plug 'elixir-editors/vim-elixir'
+    Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
+    Plug 'slashmili/alchemist.vim'
+    " Others
+    Plug 'kien/ctrlp.vim'
+    Plug 'scrooloose/nerdtree'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+	  Plug 'tpope/vim-surround'
+    Plug 'gcmt/taboo.vim'
   endif
 
 call plug#end()

@@ -34,6 +34,7 @@ set signcolumn=yes                      " Always show the signcolumn, otherwise 
 set updatetime=300                      " Faster completion
 set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
+set paste
 set incsearch
 set guifont=JetBrainsMono\ Nerd\ Font
 
@@ -55,3 +56,15 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " You can't stop me
 cmap w!! w !sudo tee %
+
+" Cursor Behavior ============================
+let &t_SI.="\e[5 q" "INSERT mode
+let &t_SR.="\e[4 q" "REPLACE mode
+let &t_SV.="\e[4 q" "REPLACE mode
+let &t_EI.="\e[1 q" "NORMAL mode
+" Blamer
+let g:blamer_enabled = 1
+let g:blamer_prefix = ' > '
+let g:blamer_relative_time = 1
+let g:blamer_delay = 1000
+let g:blamer_template = '<author> <summary>'

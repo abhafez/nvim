@@ -26,17 +26,20 @@ else
   inoremap <expr> <c-k> ("\<C-p>")
 
   " I hate escape more than anything else
-  inoremap jk <Esc>
-  inoremap kj <Esc>
+  " inoremap jj <Esc>
+  " inoremap kj <Esc>
+  :imap jj <Esc>
+  :imap jk <Esc>
+  :imap kj <Esc>
 
   " Easy CAPS
   " inoremap <c-u> <ESC>viwUi
   " nnoremap <c-u> viwU<Esc>
 
   " TAB in general mode will move to text buffer
-  nnoremap <silent> <TAB> :bnext<CR>
+  " nnoremap <silent> <TAB> :bnext<CR>
   " SHIFT-TAB will go back
-  nnoremap <silent> <S-TAB> :bprevious<CR>
+  " nnoremap <silent> <S-TAB> :bprevious<CR>
 
   " Move selected line / block of text in visual mode
   " shift + k to move up
@@ -71,10 +74,10 @@ else
   tnoremap <Esc> <C-\><C-n>
 
   " Use alt + hjkl to resize windows
-  " nnoremap <silent> <M-j>    :resize -2<CR>
-  " nnoremap <silent> <M-k>    :resize +2<CR>
-  " nnoremap <silent> <M-h>    :vertical resize -2<CR>
-  " nnoremap <silent> <M-l>    :vertical resize +2<CR>
+  nnoremap <silent> <M-j>    :resize -2<CR>
+  nnoremap <silent> <M-k>    :resize +2<CR>
+  nnoremap <silent> <M-h>    :vertical resize -2<CR>
+  nnoremap <silent> <M-l>    :vertical resize +2<CR>
 
   nnoremap <silent> <C-Up>    :resize -2<CR>
   nnoremap <silent> <C-Down>  :resize +2<CR>
@@ -92,6 +95,8 @@ else
 
 endif
 
-" Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
+nnoremap <C-c> "+y
+vnoremap <C-c> "+y
+nnoremap <C-p> "+gP
+vnoremap <C-p> "+gP
+
