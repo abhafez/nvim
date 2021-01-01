@@ -7,7 +7,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-
+    Plug 'ghifarit53/tokyonight-vim'
     " Better Comments
     Plug 'tpope/vim-commentary'
     " Change dates fast
@@ -33,7 +33,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Easymotion
     Plug 'easymotion/vim-easymotion'
     " Surround
-    Plug 'tpope/vim-surround'
+    " Plug 'tpope/vim-surround'
     " Have the file system follow you around
     Plug 'airblade/vim-rooter'
     " auto set indent settings
@@ -41,8 +41,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
     " Treesitter
-    Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'nvim-treesitter/playground'
+    " Plug 'nvim-treesitter/nvim-treesitter'
+    " Plug 'nvim-treesitter/playground'
     " Cool Icons
     Plug 'kyazdani42/nvim-web-devicons'
     Plug 'ryanoasis/vim-devicons'
@@ -51,11 +51,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Closetags
     Plug 'alvan/vim-closetag'
     " Themes
+    Plug 'arcticicestudio/nord-vim'
     Plug 'christianchiarulli/nvcode-color-schemes.vim'
     " Intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
-    Plug 'glepnir/galaxyline.nvim'
+    " Plug 'glepnir/galaxyline.nvim'
     Plug 'kevinhwang91/rnvimr'
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -83,7 +84,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Interactive code
     Plug 'metakirby5/codi.vim'
     " Better tabline
-    Plug 'romgrk/barbar.nvim'
+    " Plug 'romgrk/barbar.nvim'
     " undo time travel
     Plug 'mbbill/undotree'
     " Find and replace
@@ -113,6 +114,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'szw/vim-maximizer'
     " Neovim in Browser
     Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+    Plug 'jparise/vim-graphql'
+
+    " Elixir - Phoenix
+    Plug 'mhinz/vim-mix-format'
+    Plug 'elixir-editors/vim-elixir'
+    Plug 'avdgaag/vim-phoenix'
     " Rainbow brackets
     " Plug 'luochen1990/rainbow'
     " Async Linting Engine
@@ -128,6 +135,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'jelera/vim-javascript-syntax'
     " Plugin Graveyard
 
+    Plug 'gcmt/taboo.vim'
     " Debug
     " Plug 'mfussenegger/nvim-dap'
     " Plug 'nvim-dap-virtual-text'

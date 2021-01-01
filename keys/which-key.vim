@@ -185,6 +185,10 @@ let g:which_key_map.m = {
 "       \ }
       " \ 's' : [':Snippets'     , 'snippets'],
 
+let g:which_key_map.x = {
+        \ 'name': 'Elixir',
+        \ 'f': [':MixFormat', 'format'],
+        \ }
 " s is for search
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
